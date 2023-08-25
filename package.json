@@ -1,6 +1,6 @@
 {
-  "name": "@konnec/vue-eloquent",
-  "version": "0.7.0",
+  "name": "@konnec/vue-middleware-plugin",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -13,18 +13,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@vuelidate/core": "^2.0.3",
-    "@vuelidate/validators": "^2.0.3",
-    "axios": "^1.4.0",
-    "laravel-echo": "^1.15.2",
-    "lodash": "^4.17.21",
-    "rxjs": "^7.8.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.3.3",
     "@types/jsdom": "^21.1.1",
-    "@types/lodash": "^4.14.197",
     "@types/node": "^20.5.1",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
@@ -40,16 +33,14 @@
     "eslint-plugin-unused-imports": "^3.0.0",
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^22.1.0",
-    "msw": "^1.2.3",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.0.2",
-    "pusher-js": "^8.3.0",
     "typescript": "4.9.5",
     "vite": "^4.4.9",
     "vitest": "^0.34.2",
     "vue-tsc": "^1.8.8"
   },
-  "description": "An interface for Vue and Laravel Eloquent through API",
+  "description": "A middleware factory for Vue 3",
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "types": "./src/index.ts",
@@ -61,7 +52,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/cimd/vue-eloquent.git"
+    "url": "git+ssh://git@github.com/cimd/vue-middleware-plugin.git"
   },
   "keywords": [
     "Vue",
@@ -69,15 +60,15 @@
     "Api",
     "Eloquent",
     "Model",
-    "Validation",
-    "Broadcast",
-    "Vuelidate",
-    "Echo"
+    "Controller",
+    "Middleware",
+    "Router",
+    "Routing"
   ],
   "author": "Christian D'Aquino",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cimd/vue-eloquent/issues"
+    "url": "https://github.com/cimd/vue-middleware-plugin/issues"
   },
-  "homepage": "https://github.com/cimd/vue-eloquent#readme"
+  "homepage": "https://github.com/cimd/vue-middleware-plugin#readme"
 }
