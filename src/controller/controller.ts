@@ -41,7 +41,7 @@ export const requestsInjection = async (navigation: navigation) => {
   return
 }
 
-const serializeParams = (params: any) => {
+function serializeParams(params: any) {
   Object.keys(params).forEach(key => {
     if (params[ key ]) {
       params[ key ] = Number(params[ key ])

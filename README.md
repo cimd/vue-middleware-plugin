@@ -19,17 +19,10 @@ An interface for Vue 3 an Laravel Eloquent models through API requests.
 There are two packages available that can be independently but work better together.
 
 ### Vue 3 Package
-`yarn add @konnec/vue-eloquent`
+`yarn add @konnec/vue-middleware-plugin`
 
 #### Vue Requirements
 1. `Vue 3`
-
-### Laravel Package
-`composer require konnec/vue-eloquent-api`
-
-#### Laravel Requirements
-1. `Laravel 10`
-2. `PHP ^8.1`
 
 ## Documentation
 
