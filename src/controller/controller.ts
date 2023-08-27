@@ -1,4 +1,4 @@
-import { reactive } from "vue"
+import { reactive } from 'vue'
 
 export interface route {
   query?: any,
@@ -42,21 +42,21 @@ export const requestsInjection = async (navigation: navigation) => {
   params = serializeParams(navigation.to.params)
   // console.log('Serialized Params: ', params)
 
-  model = new (navigation.to.meta.controller[0])()
-  const method = navigation.to.meta.controller[1]
-  await model[method](params.id)
+  model = new (navigation.to.meta.controller[ 0 ])()
+  const method = navigation.to.meta.controller[ 1 ]
+  await model[ method ](params.id)
   console.log(model.model.comments)
 
   return
 }
 
-function serializeParams (params: any) {
+function serializeParams(params: any) {
   Object.keys(params).forEach(key => {
-    if (params[key]) {
-      params[key] = Number(params[key])
+    if (params[ key ]) {
+      params[ key ] = Number(params[ key ])
     }
-    else if (params[key] === '') {
-      params[key] = null
+    else if (params[ key ] === '') {
+      params[ key ] = null
     }
   })
 
