@@ -2,7 +2,10 @@
 // runs the default `next()` callback but also triggers
 // the subsequent Middleware function.
 
-const nextFactory = (context, middleware, index) => {
+import { route } from '@/controller/controller'
+import { Router } from 'vue-router'
+
+const nextFactory = (context: { from?: route; to?: route; router?: Router; next?: any }, middleware: any|any[], index: number) => {
   const subsequentMiddleware = middleware[ index ]
   // If no subsequent Middleware exists,
   // the default `next()` callback is returned.

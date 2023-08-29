@@ -1,4 +1,5 @@
 import { reactive } from 'vue'
+import { pathToRegexp } from 'path-to-regexp'
 
 export interface route {
   query?: any,
@@ -34,7 +35,30 @@ export const useModel = () => {
 
 export const requestsInjection = async (navigation: navigation) => {
   request = navigation.to.query
-  // console.log('request: ', request)
+
+  console.log('route: ', navigation)
+  console.log('route: ', navigation.to.matched)
+
+  const route = navigation.to.matched.find(element => element.children.length ===0)
+  console.log(route)
+
+  const keys = []
+  const regex = pathToRegexp(route.path, keys)
+  console.log(keys)
+  // console.log(regex)
+
+  console.log(navigation.to.params)
+
+  const mapping = keys.map(el => {
+    return {
+      el.name: navigation.to.params[el.name]
+    }
+  })
+  console.log(mapping)
+
+
+
+
 
   if (!navigation.to.meta.controller) throw new Error('Controller not defined')
   if (!navigation.to.meta.controller.length) throw new Error('Controller/Method not defined')
