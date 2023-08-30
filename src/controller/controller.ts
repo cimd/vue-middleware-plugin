@@ -49,12 +49,12 @@ export const requestsInjection = async (navigation: navigation) => {
 
   console.log(navigation.to.params)
 
-  const mapping = keys.map(el => {
-    return {
-      el.name: navigation.to.params[el.name]
-    }
-  })
-  console.log(mapping)
+  // const mapping = keys.map(el => {
+  //   return {
+  //     el.name: navigation.to.params[el.name]
+  //   }
+  // })
+  // console.log(mapping)
 
 
 
