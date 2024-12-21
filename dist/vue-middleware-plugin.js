@@ -40,4 +40,4 @@ export {
   f as useController,
   h as useModel
 };
-//# sourceMappingURL=vue-middleware-plugin.mjs.map
+//# sourceMappingURL=vue-middleware-plugin.js.map

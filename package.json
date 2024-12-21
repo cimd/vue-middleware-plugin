@@ -1,6 +1,6 @@
 {
   "name": "@konnec/vue-middleware-plugin",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -13,14 +13,18 @@
     "format": "prettier --write src/ test/"
   },
   "description": "A middleware plugin for Vue 3",
-  "main": "./src/index.ts",
-  "module": "./src/index.ts",
-  "types": "./src/index.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-middleware-plugin.umd.js",
+  "module": "./dist/vue-middleware-plugin.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./src/index.d.ts",
-      "import": "./src/index.ts",
-      "require": "./src/index.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-middleware-plugin.mjs",
+      "require": "./dist/vue-middleware-plugin.umd.js"
     }
   },
   "dependencies": {
