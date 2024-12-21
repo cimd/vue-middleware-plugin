@@ -1,6 +1,6 @@
 {
   "name": "@konnec/vue-middleware-plugin",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -17,14 +17,14 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/vue-middleware-plugin.umd.js",
-  "module": "./dist/vue-middleware-plugin.mjs",
+  "main": "./dist/vue-middleware-plugin.js",
+  "module": "./dist/vue-middleware-plugin.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/vue-middleware-plugin.mjs",
-      "require": "./dist/vue-middleware-plugin.umd.js"
+      "import": "./dist/vue-middleware-plugin.js",
+      "require": "./dist/vue-middleware-plugin.umd.cjs"
     }
   },
   "dependencies": {
