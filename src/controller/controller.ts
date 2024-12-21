@@ -5,8 +5,9 @@ export interface route {
   meta?: {
     name: string
     title: string,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
     middleware?: Function | Function[],
-    // controller?: [any, string],
+    controller?: [any, string],
   }
   params?: {
     id: string | undefined
@@ -35,8 +36,8 @@ export const useModel = () => {
 export const requestsInjection = async (navigation: navigation) => {
   request = navigation.to.query
 
-  if (!navigation.to.meta.controller) throw new Error('Controller not defined')
-  if (!navigation.to.meta.controller.length) throw new Error('Controller/Method not defined')
+  if (!navigation.to.meta?.controller) throw new Error('Controller not defined')
+  if (!navigation.to.meta?.controller.length) throw new Error('Controller/Method not defined')
   if (!navigation.to.params) new Error('No Params found')
   params = serializeParams(navigation.to.params)
   // console.log('Serialized Params: ', params)

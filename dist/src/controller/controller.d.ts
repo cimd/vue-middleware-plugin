@@ -4,6 +4,7 @@ export interface route {
         name: string;
         title: string;
         middleware?: Function | Function[];
+        controller?: [any, string];
     };
     params?: {
         id: string | undefined;

@@ -1,12 +1,12 @@
 // Creates a `nextMiddleware()` function which not only
 // runs the default `next()` callback but also triggers
 // the subsequent Middleware function.
-import { route } from '@/controller/controller'
+import type { route } from '@/controller/controller'
 import nextFactory from '@/middleware/next-factory'
-import { Router } from 'vue-router'
+import type { Router } from 'vue-router'
 
 const nextMiddleware = (from: route, to: route, router: Router) => {
-  if (to.meta.middleware) {
+  if (to.meta?.middleware) {
     const middleware = Array.isArray(to.meta.middleware)
       ? to.meta.middleware
       : [to.meta.middleware]

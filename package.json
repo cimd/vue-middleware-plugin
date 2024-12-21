@@ -1,6 +1,6 @@
 {
   "name": "@konnec/vue-middleware-plugin",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -9,7 +9,7 @@
     "test:unit:ui": "vitest --ui --api 9527",
     "build-only": "vite build",
     "type-check": "vue-tsc -p tsconfig.json --composite false",
-    "lint": "eslint -c ./eslint.config.js \"./src*/**/*.{ts,js,cjs,mjs,vue}\"",
+    "lint": "eslint -c ./eslint.config.js --fix \"./src*/**/*.{ts,js,cjs,mjs,vue}\"",
     "format": "prettier --write src/ test/"
   },
   "description": "A middleware plugin for Vue 3",

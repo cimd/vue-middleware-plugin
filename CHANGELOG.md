@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Bump dependencies
 
+## [0.2.3]
+### Added
+### Fixed
+- Types
+
 ## [0.2.0]
 ### Added
 - Bump dependencies

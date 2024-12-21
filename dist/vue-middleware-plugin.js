@@ -1,43 +1,45 @@
 import { reactive as s } from "vue";
-let c = s({}), l = s({}), d = s({});
-const f = () => ({ request: c, model: l, params: d }), h = () => l, M = async (e) => {
-  if (c = e.to.query, !e.to.meta.controller) throw new Error("Controller not defined");
-  if (!e.to.meta.controller.length) throw new Error("Controller/Method not defined");
-  e.to.params, d = i(e.to.params), l = new e.to.meta.controller[0]();
+let m = s({}), l = s({}), d = s({});
+const h = () => ({ request: m, model: l, params: d }), M = () => l, b = async (e) => {
+  var o, t;
+  if (m = e.to.query, !((o = e.to.meta) != null && o.controller)) throw new Error("Controller not defined");
+  if (!((t = e.to.meta) != null && t.controller.length)) throw new Error("Controller/Method not defined");
+  e.to.params, d = a(e.to.params), l = new e.to.meta.controller[0]();
   const r = e.to.meta.controller[1];
   await l[r](d.id), console.log(l.model.comments);
 };
-function i(e) {
+function a(e) {
   return Object.keys(e).forEach((r) => {
     e[r] ? e[r] = Number(e[r]) : e[r] === "" && (e[r] = null);
   }), e;
 }
-const m = (e, r, o) => {
+const u = (e, r, o) => {
   const t = r[o];
   return t ? (...n) => {
-    m(e, r, o + 1), t({ ...e });
+    u(e, r, o + 1), t({ ...e });
   } : e.next;
-}, a = (e, r, o) => {
-  if (r.meta.middleware) {
-    const t = Array.isArray(r.meta.middleware) ? r.meta.middleware : [r.meta.middleware], n = {
+}, w = (e, r, o) => {
+  var t;
+  if ((t = r.meta) != null && t.middleware) {
+    const n = Array.isArray(r.meta.middleware) ? r.meta.middleware : [r.meta.middleware], c = {
       from: e,
       to: r,
       // next,
       router: o
-    }, u = m(n, t, 1);
-    return t[0]({ ...n, next: u });
+    }, i = u(c, n, 1);
+    return n[0]({ ...c, next: i });
   }
-}, b = {
+}, q = {
   install: (e, r) => {
     r.beforeEach((o, t) => {
-      a(t, o, r);
+      w(t, o, r);
     });
   }
 };
 export {
-  b as MiddlewarePlugin,
-  M as requestsInjection,
-  f as useController,
-  h as useModel
+  q as MiddlewarePlugin,
+  b as requestsInjection,
+  h as useController,
+  M as useModel
 };
 //# sourceMappingURL=vue-middleware-plugin.js.map
