@@ -1,8 +1,8 @@
 // Creates a `nextMiddleware()` function which not only
 // runs the default `next()` callback but also triggers
 // the subsequent Middleware function.
-import { route } from '../controller/controller'
-import nextFactory from './next-factory'
+import { route } from '@/controller/controller'
+import nextFactory from '@/middleware/next-factory'
 import { Router } from 'vue-router'
 
 const nextMiddleware = (from: route, to: route, router: Router) => {

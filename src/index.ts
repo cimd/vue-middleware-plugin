@@ -2,7 +2,6 @@ import {
   requestsInjection,
   useController,
   useModel,
-  // useRequest 
 } from './controller/controller'
 import MiddlewarePlugin from './middleware/MiddlewarePlugin'
 
@@ -11,5 +10,4 @@ export {
   requestsInjection,
   useController,
   useModel,
-  // useRequest
 }
