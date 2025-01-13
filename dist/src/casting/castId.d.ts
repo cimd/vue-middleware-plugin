@@ -1,3 +1,2 @@
-import { RouteRecordRaw } from 'vue-router';
-declare function castId(id: string | undefined): (route: RouteRecordRaw) => any;
-export default castId;
+import { RouteLocationNormalizedLoaded } from 'vue-router';
+export default function castId(): (route: RouteLocationNormalizedLoaded) => import('vue-router').RouteParamsGeneric;

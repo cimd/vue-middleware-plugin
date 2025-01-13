@@ -1,13 +1,11 @@
-import type { RouteRecordRaw } from 'vue-router'
+import type { RouteLocationNormalizedLoaded } from 'vue-router'
 
-function castId(id: string | undefined) {
-  return function(route: RouteRecordRaw) {
-    if (id) {
-      return {...route.params, id: parseInt(id) }
+export default function castId() {
+  return (route: RouteLocationNormalizedLoaded) => {
+    if (route.params?.id) {
+      route.params.id = parseInt(route.params.id as string)
     }
-
+    
     return route.params
   }
 }
-
-export default castId
